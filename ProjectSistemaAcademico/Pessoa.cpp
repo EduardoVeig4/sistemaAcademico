@@ -46,3 +46,12 @@ void Pessoa::calc_idade_imprime(int diaAT, int mesAT, int anoAT) {
 int Pessoa::getIdade() {
 	return idadeP;
 }
+
+void Pessoa::setUnivFiliado(Universidade* pu) {
+	pUnivFiliado = pu;
+}
+
+void Pessoa::OndeTrabalho() {
+	// Um método da referência UnivFiliado é chamado
+	cout << nomeP << " trabalha para a " << pUnivFiliado->getNome() << endl;
+}

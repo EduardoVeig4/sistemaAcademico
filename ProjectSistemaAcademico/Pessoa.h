@@ -10,6 +10,9 @@ private:
 	int idadeP;
 	char nomeP[30];
 
+	// pUnivFiliado é apenas uma referência a um objeto associado
+	Universidade* pUnivFiliado;
+
 public:
 	Pessoa(int diaNa, int mesNa, int anoNa, const char* nome = "");
 	Pessoa();
@@ -19,4 +22,7 @@ public:
 	void imprime_idade();
 	void calc_idade_imprime(int diaAT, int mesAT, int anoAT);
 	int getIdade();
+
+	void setUnivFiliado(Universidade* pu);
+	void OndeTrabalho();
 };
