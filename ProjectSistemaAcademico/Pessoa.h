@@ -13,11 +13,13 @@ private:
 	// pUnivFiliado é apenas uma referência a um objeto associado
 	Universidade* pUnivFiliado;
 
+	Departamento* pDeparFiliado;
+
 public:
 	Pessoa(int diaNa, int mesNa, int anoNa, const char* nome = "");
 	Pessoa();
 
-	void  inicializa(int diaNa, int mesNa, int anoNa, const char* nome = "");
+	void inicializa(int diaNa, int mesNa, int anoNa, const char* nome = "");
 	void calc_idade(int diaAT, int mesAT, int anoAT);
 	void imprime_idade();
 	void calc_idade_imprime(int diaAT, int mesAT, int anoAT);

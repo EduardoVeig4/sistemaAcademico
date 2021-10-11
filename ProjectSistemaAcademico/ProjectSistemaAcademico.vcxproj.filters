@@ -24,6 +24,9 @@
     <ClInclude Include="Universidade.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="Departamento.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Pessoa.cpp">
@@ -33,6 +36,9 @@
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="Universidade.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Departamento.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>
