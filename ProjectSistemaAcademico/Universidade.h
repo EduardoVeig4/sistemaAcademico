@@ -4,24 +4,14 @@ class Universidade {
 private:
 	char nomeU[30];
 
-	Departamento DACOC;
-	Departamento DAEFI;
-	Departamento DAELN;
-	Departamento DAELT;
-	Departamento DAEST;
-	Departamento DAFIS;
-	Departamento DAGEE;
-	Departamento DAINF;
-	Departamento DALEM;
-	Departamento DAMAT;
-	Departamento DAMEC;
-	Departamento DAQBI;
-	Departamento DEAAU;
+	Departamento* pDpto[50]; // Ponteiro para Departamento
 
 public:
-	Universidade(const char* nome = ""); // Construtor
+	Universidade(); // Construtor
 	~Universidade(); // Destrutor
 
 	void setNome(const char* nome = "");
 	char* getNome();
+	void setDepartamento(Departamento* pdep, int ctd);
+	void imprimeDpto();
 };

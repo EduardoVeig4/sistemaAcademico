@@ -10,15 +10,6 @@ Principal::Principal() :
 	Newton(),
 	Simao()
 {
-	Simao.inicializa(3, 10, 1976, "Jean Simão");
-	Einstein.inicializa(14, 3, 1879, "Albert Einstein");
-	Newton.inicializa(4, 1, 1643, "Isaac Newton");
-
-	UTFPR.setNome("UTFPR");
-
-	// Aqui os objetos UTFPR e Simao são associados.
-	// Na verdade, UTFPR é associado ao Simao via uma passagem por referência do 'endereço' dela.
-	Simao.setUnivFiliado(&UTFPR);
 
 	/*
 	// Pergunta ao usuário a data
@@ -34,8 +25,44 @@ Principal::Principal() :
 	mesAtual = st.wMonth;
 	anoAtual = st.wYear;
 
+	// Inicialização dos objetos da classe Pessoa
+	Simao.inicializa(3, 10, 1976, "Jean Simão");
+	Einstein.inicializa(14, 3, 1879, "Albert Einstein");
+	Newton.inicializa(4, 1, 1643, "Isaac Newton");
+
+	// Registro dos nomes das universidades
+	UTFPR.setNome("UTFPR");
+	Princeton.setNome("University of Princeton");
+	Cambridge.setNome("University od Cambridge");
+
+	// Registro dos nomes dos departamentos
+	DAELN.setNome("Eletronica");
+	FisicaPrinceton.setNome("Fisica");
+	MatematicaCambridge.setNome("Matematica");
+
+	// Agragação dos Departamentos as Universidades
+	UTFPR.setDepartamento(&DAELN, 0);
+	Princeton.setDepartamento(&FisicaPrinceton, 0);
+	Cambridge.setDepartamento(&MatematicaCambridge, 0);
+
+	// Aqui os objetos UTFPR e Simao são associados.
+	// Na verdade, UTFPR é associado ao Simao via uma passagem por referência do 'endereço' dela.
+	//Simao.setUnivFiliado(&UTFPR);
+
+	// 'Filiação' a universidade
+	Simao.setUnivFiliado(&UTFPR);
+	Einstein.setUnivFiliado(&Princeton);
+	Newton.setUnivFiliado(&Cambridge);
+
+	// 'Filiação' ao departamento
+	Simao.setDepartamento(&DAELN);
+	Einstein.setDepartamento(&FisicaPrinceton);
+	Newton.setDepartamento(&MatematicaCambridge);
+
 	Executar(); // Execução do Objeto Principal
 }
+
+Principal::~Principal(){}
 
 void Principal::Executar() {
 	Simao.calc_idade_imprime(diaAtual, mesAtual, anoAtual);
@@ -43,4 +70,10 @@ void Principal::Executar() {
 	Newton.calc_idade_imprime(diaAtual, mesAtual, anoAtual);
 
 	Simao.OndeTrabalho();
+	Einstein.OndeTrabalho();
+	Newton.OndeTrabalho();
+
+	Simao.QualDepartamentoTrabalho();
+	Einstein.QualDepartamentoTrabalho();
+	Newton.QualDepartamentoTrabalho();
 }

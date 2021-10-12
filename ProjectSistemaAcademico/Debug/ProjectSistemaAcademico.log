@@ -1,0 +1,2 @@
+﻿MSVCRTD.lib(exe_main.obj) : error LNK2019: símbolo externo não resolvido, _main, referenciado na função "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\epont\source\repos\ProjectSistemaAcademico\Debug\ProjectSistemaAcademico.exe : fatal error LNK1120: 1 externo não resolvidos

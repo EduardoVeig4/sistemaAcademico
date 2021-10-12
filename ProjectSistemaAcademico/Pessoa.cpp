@@ -14,6 +14,8 @@ Pessoa::Pessoa() {
 	inicializa(0, 0, 0);
 }
 
+Pessoa::~Pessoa(){}
+
 void Pessoa::inicializa(int diaNa, int mesNa, int anoNa, const char* nome) {
 	idadeP = 0;
 	diaP = diaNa;
@@ -51,7 +53,15 @@ void Pessoa::setUnivFiliado(Universidade* pu) {
 	pUnivFiliado = pu;
 }
 
+void Pessoa::setDepartamento(Departamento* pdep) {
+	pDptoFiliado = pdep;
+}
+
 void Pessoa::OndeTrabalho() {
 	// Um método da referência UnivFiliado é chamado
 	cout << nomeP << " trabalha para a " << pUnivFiliado->getNome() << endl;
+}
+
+void Pessoa::QualDepartamentoTrabalho() {
+	cout << nomeP << "trabalha para a " << pUnivFiliado->getNome() << pDptoFiliado->getNome() << endl;
 }

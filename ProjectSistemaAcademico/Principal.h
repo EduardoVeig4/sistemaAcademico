@@ -9,13 +9,14 @@ private:
 	Pessoa Newton;
 
 	// UTFPR é agregada ao objeto desta classe
-	Universidade UTFPR;
+	Universidade UTFPR, Princeton, Cambridge;
 
-	int diaAtual;
-	int mesAtual;
-	int anoAtual;
+	Departamento DAELN, FisicaPrinceton, MatematicaCambridge;
+
+	int diaAtual, mesAtual, anoAtual;
 
 public:
 	Principal();
+	~Principal();
 	void Executar();
 };
