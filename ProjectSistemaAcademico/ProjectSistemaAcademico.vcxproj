@@ -114,7 +114,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -139,15 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Aluno.h" />
     <ClInclude Include="Departamento.h" />
     <ClInclude Include="Pessoa.h" />
     <ClInclude Include="Principal.h" />
+    <ClInclude Include="Professor.h" />
     <ClInclude Include="Universidade.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Aluno.cpp" />
     <ClCompile Include="Departamento.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="Principal.cpp" />
+    <ClCompile Include="Professor.cpp" />
     <ClCompile Include="Universidade.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

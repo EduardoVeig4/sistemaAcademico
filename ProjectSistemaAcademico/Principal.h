@@ -1,12 +1,13 @@
 #pragma once // Impede que a classe seja incluida mais de uma vez
 #include "Pessoa.h"
 #include "Universidade.h"
+#include "Professor.h"
 
 class Principal {
 private:
-	Pessoa Simao;
-	Pessoa Einstein;
-	Pessoa Newton;
+	Professor Simao;
+	Professor Einstein;
+	Professor Newton;
 
 	// UTFPR é agregada ao objeto desta classe
 	Universidade UTFPR, Princeton, Cambridge;

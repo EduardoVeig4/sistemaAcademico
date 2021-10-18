@@ -4,13 +4,17 @@
 #include <Windows.h>
 using namespace std;
 
+int main() {
+	Principal obj;
+	obj.Executar();
+}
+
 Principal::Principal() :
 	// Chamar a construtora sem parâmetros é opcional, o C++ chama implicitamente, porém é recomendável chamá-la
 	Einstein(),
 	Newton(),
 	Simao()
 {
-
 	/*
 	// Pergunta ao usuário a data
 	cout << "Informe o dia/mes/ano." << endl;
@@ -53,26 +57,33 @@ Principal::Principal() :
 	Simao.setUnivFiliado(&UTFPR);
 	Einstein.setUnivFiliado(&Princeton);
 	Newton.setUnivFiliado(&Cambridge);
+	printf("\n");
 
 	// 'Filiação' ao departamento
 	Simao.setDepartamento(&DAELN);
 	Einstein.setDepartamento(&FisicaPrinceton);
 	Newton.setDepartamento(&MatematicaCambridge);
+	printf("\n");
 
-	Executar(); // Execução do Objeto Principal
+	// Executar(); // Execução do Objeto Principal
 }
 
 Principal::~Principal(){}
 
 void Principal::Executar() {
+	// Cálculo da idade
 	Simao.calc_idade_imprime(diaAtual, mesAtual, anoAtual);
 	Einstein.calc_idade_imprime(diaAtual, mesAtual, anoAtual);
 	Newton.calc_idade_imprime(diaAtual, mesAtual, anoAtual);
+	printf("\n");
 
+	// Universidade que a Pessoa trabalha
 	Simao.OndeTrabalho();
 	Einstein.OndeTrabalho();
 	Newton.OndeTrabalho();
+	printf("\n");
 
+	// Departamento que a Pessoa trabalha
 	Simao.QualDepartamentoTrabalho();
 	Einstein.QualDepartamentoTrabalho();
 	Newton.QualDepartamentoTrabalho();
