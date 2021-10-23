@@ -4,15 +4,17 @@
 
 class Professor : public Pessoa{ // Herda os atributos e métodos da classe Pessoa
 private:
+
 	// pUnivFiliado é apenas uma referência a um objeto associado
 	Universidade* pUnivFiliado;
 	Departamento* pDptoFiliado;
 
 public:
+
 	Professor(int diaNa, int mesNa, int anoNa, const char* nome = "");
 	Professor();
 	~Professor();
-
+/*---------------------------------------------------------------------------------*/
 	void setUnivFiliado(Universidade* pu);
 	void setDepartamento(Departamento* pdpto);
 	void OndeTrabalho();

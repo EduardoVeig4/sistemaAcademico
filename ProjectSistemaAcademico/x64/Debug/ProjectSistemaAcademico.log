@@ -1,4 +1,9 @@
-﻿  Principal.cpp
+﻿  Aluno.cpp
+  Departamento.cpp
+  Disciplina.cpp
+  Pessoa.cpp
+  Principal.cpp
   Professor.cpp
+  Universidade.cpp
   Gerando Código...
   ProjectSistemaAcademico.vcxproj -> C:\Users\epont\source\repos\ProjectSistemaAcademico\x64\Debug\ProjectSistemaAcademico.exe

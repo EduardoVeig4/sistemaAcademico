@@ -1,6 +1,8 @@
 #include "Universidade.h"
 #include <string.h>
 #include <iostream>
+#include <vector>
+// #include <list>
 using namespace std;
 
 Universidade::~Universidade() {
@@ -8,23 +10,34 @@ Universidade::~Universidade() {
 
 Universidade::Universidade() {
 	strcpy(nomeU, "");
-	for (int i = 0; i < 50; i++) { pDpto[i] = NULL; }
+	int tam = (int)LpDptos.size();
+	for (int i = 0; i < tam; i++) { LpDptos[i] = NULL; }
 }
 
 void Universidade::setNome(const char* nome) { strcpy(nomeU, nome); }
 
 char* Universidade::getNome() { return nomeU; }
 
-void Universidade::setDepartamento(Departamento* pdep, int ctd) {
+void Universidade::setDepartamento(Departamento* pdep) {
 	// Agregação via ponteiros
-	pDpto[ctd] = pdep;
+	//pDpto[ctd] = pdep;
+
+	LpDptos.push_back(pdep); // Empurra o final do vetor o endereço do ponteiro passado por parâmetro
 }
 
 void Universidade::imprimeDpto() {
-	//Departamento* pDep = NULL;
-	for (int i = 0; i < 50; i++) {
-		//pDep = pDpto[i];
-		if (pDpto[i] != NULL)//(pDep != NULL)
-			cout << pDpto[i]->getNome() << endl; //cout << pDep->getNome() << endl;
+	int tam = (int)LpDptos.size();
+	for (int i = 0; i < tam; i++) {
+		cout << LpDptos[i]->getNome() << endl;
 	}
+
+	// Usando list
+	/*
+	list< Departamento* >::iterator iterador; // Tipo iterator pertence ao list
+
+	for(iterador = LpDptos.begin(); iterador != LpDptos.end(); iterador++){
+		pDep = *iterador;
+		cout << (*iterador)->getNome() << end;
+	}
+	*/
 }
