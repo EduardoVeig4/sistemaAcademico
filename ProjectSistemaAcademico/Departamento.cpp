@@ -1,19 +1,21 @@
 #include "Departamento.h"
 #include "Universidade.h"
 #include "Disciplina.h"
+#include "ListaDisciplinas.h"
 
 Departamento::Departamento(){
-	pDisciplPrim = NULL;
-	pDisciplAtual = NULL;
+	pObjLDisciplinas = new ListaDisciplinas(-1, "");
 }
 
 Departamento::~Departamento(){
-	pDisciplPrim = NULL;
-	pDisciplAtual = NULL;
+	if (pObjLDisciplinas) {
+		delete pObjLDisciplinas;
+	}
 }
 
 void Departamento::setNome(const char* nome) {
 	strcpy(nomeD, nome);
+	pObjLDisciplinas->setNome(nome);
 }
 char* Departamento::getNome() {
 	return nomeD;
@@ -27,6 +29,19 @@ Universidade* Departamento::getUniversidade() {
 	return pUniv;
 }
 
+void Departamento::incluaDisciplina(Disciplina* pd) {
+	pObjLDisciplinas->incluaDisciplina(pd);
+}
+
+void Departamento::listeDisciplinas() {
+	pObjLDisciplinas->listeDisciplinas();
+}
+
+void Departamento::listeDisciplinas2() {
+	pObjLDisciplinas->listeDisciplinas2();
+}
+
+/*	// Movido para ListaDisciplinas.cpp
 void Departamento::incluaDisciplina(Disciplina* pd) {
 	if (pDisciplPrim == NULL) {
 		pDisciplPrim = pd;
@@ -61,3 +76,4 @@ void Departamento::listeDisciplinas2() {
 		pAux = pAux->getAnte();
 	}
 }
+*/

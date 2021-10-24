@@ -1,5 +1,8 @@
-﻿  Principal.cpp
-Disciplina.obj : error LNK2019: símbolo externo não resolvido, "public: __cdecl ElAluno::ElAluno(void)" (??0ElAluno@@QEAA@XZ), referenciado na função "public: void __cdecl Disciplina::incluaAluno(class Aluno *)" (?incluaAluno@Disciplina@@QEAAXPEAVAluno@@@Z)
+﻿  Departamento.cpp
+  Universidade.cpp
+  Gerando Código...
+ListaAlunos.obj : error LNK2019: símbolo externo não resolvido, "public: __cdecl ElAluno::ElAluno(void)" (??0ElAluno@@QEAA@XZ), referenciado na função "public: void __cdecl ListaAlunos::incluaAluno(class Aluno *)" (?incluaAluno@ListaAlunos@@QEAAXPEAVAluno@@@Z)
+ListaAlunos.obj : error LNK2019: símbolo externo não resolvido, "public: __cdecl ElAluno::~ElAluno(void)" (??1ElAluno@@QEAA@XZ), referenciado na função "public: void * __cdecl ElAluno::`scalar deleting destructor'(unsigned int)" (??_GElAluno@@QEAAPEAXI@Z)
 Principal.obj : error LNK2019: símbolo externo não resolvido, "public: __cdecl Aluno::Aluno(int)" (??0Aluno@@QEAA@H@Z), referenciado na função "public: __cdecl Principal::Principal(void)" (??0Principal@@QEAA@XZ)
 Principal.obj : error LNK2019: símbolo externo não resolvido, "public: __cdecl Aluno::~Aluno(void)" (??1Aluno@@QEAA@XZ), referenciado na função "int `public: __cdecl Principal::Principal(void)'::`1'::dtor$17" (?dtor$17@?0???0Principal@@QEAA@XZ@4HA)
-C:\Users\epont\source\repos\ProjectSistemaAcademico\x64\Debug\ProjectSistemaAcademico.exe : fatal error LNK1120: 3 externo não resolvidos
+C:\Users\epont\source\repos\ProjectSistemaAcademico\x64\Debug\ProjectSistemaAcademico.exe : fatal error LNK1120: 4 externo não resolvidos

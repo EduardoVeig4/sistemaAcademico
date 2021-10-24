@@ -1,9 +1,10 @@
 #pragma once
-#include "EveryThing.h"
+#include "stdafx.h"
 
 // Se A inlui B, B não pode incluir A
 class Universidade; // Pequeno artifício para contornar o problema
 class Disciplina;
+class ListaDisciplinas;
 
 class Departamento{
 private:
@@ -14,8 +15,7 @@ private:
 	Universidade* pUniv;
 /*---------------------------------------------------------------------------------*/
 	// Associação para com várias Disciplinas
-	Disciplina* pDisciplPrim;
-	Disciplina* pDisciplAtual;
+	ListaDisciplinas* pObjLDisciplinas;
 
 public:
 	Departamento(); // Construtor

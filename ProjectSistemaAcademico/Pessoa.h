@@ -1,5 +1,6 @@
 #pragma once // Impede que a classe seja incluida mais de uma vez
-#include "EveryThing.h"
+#include "stdafx.h"
+
 #include "Universidade.h"
 
 class Pessoa {

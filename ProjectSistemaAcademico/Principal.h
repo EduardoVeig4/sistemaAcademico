@@ -1,10 +1,12 @@
 #pragma once // Impede que a classe seja incluida mais de uma vez
-#include "EveryThing.h"
+#include "stdafx.h"
+
 #include "Pessoa.h"
 #include "Universidade.h"
 #include "Professor.h"
 #include "Disciplina.h"
 #include "Aluno.h"
+#include "ListaAlunos.h"
 
 class Principal {
 private:
@@ -36,6 +38,9 @@ private:
 	Disciplina Introd_Alg_2007;
 	Disciplina Computacao2_2007;
 	Disciplina Metodos2_2007;
+/*---------------------------------------------------------------------------------*/
+	// Lista de Alunos da Disciplina
+	
 /*---------------------------------------------------------------------------------*/
 	// Alunos
 	Aluno AAA;

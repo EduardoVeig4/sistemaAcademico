@@ -1,5 +1,6 @@
 #pragma once
-#include "EveryThing.h"
+#include "stdafx.h"
+
 #include "Pessoa.h"
 #include "Universidade.h"
 
