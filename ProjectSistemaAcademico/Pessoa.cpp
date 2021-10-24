@@ -1,8 +1,3 @@
-#include <string.h>
-#include <iostream>
-using std::cout; // inclui a biblioteca inteira 'using namespaca std;' ou somente o comando que vai ser utilizado
-using std::endl;
-using std::cin;
 #include "Pessoa.h"
 
 // Função Construtora

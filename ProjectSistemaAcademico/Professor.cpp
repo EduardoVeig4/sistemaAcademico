@@ -31,5 +31,5 @@ void Professor::OndeTrabalho() {
 }
 
 void Professor::QualDepartamentoTrabalho() {
-	cout << nomeP << "trabalha para a " << pUnivFiliado->getNome() << pDptoFiliado->getNome() << endl;
+	cout << nomeP << " trabalha para a " << pUnivFiliado->getNome() << pDptoFiliado->getNome() << endl;
 }

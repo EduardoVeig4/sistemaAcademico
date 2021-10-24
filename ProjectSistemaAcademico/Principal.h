@@ -1,8 +1,10 @@
 #pragma once // Impede que a classe seja incluida mais de uma vez
+#include "EveryThing.h"
 #include "Pessoa.h"
 #include "Universidade.h"
 #include "Professor.h"
 #include "Disciplina.h"
+#include "Aluno.h"
 
 class Principal {
 private:
@@ -15,8 +17,8 @@ private:
 /*---------------------------------------------------------------------------------*/
 	// Departamentos
 	Departamento DAELN;
-	Departamento MatematicaUTFPR;
-	Departamento FisicaUTFPR;
+	Departamento DAMAT;
+	Departamento DAFIS;
 
 	Departamento FisicaPrinceton;
 	Departamento MatematicaPrinceton;
@@ -35,6 +37,12 @@ private:
 	Disciplina Computacao2_2007;
 	Disciplina Metodos2_2007;
 /*---------------------------------------------------------------------------------*/
+	// Alunos
+	Aluno AAA;
+	Aluno BBB;
+	Aluno CCC;
+	Aluno DDD;
+
 	int diaAtual, mesAtual, anoAtual;
 
 public:
@@ -47,6 +55,7 @@ public:
 	void InicializaDepartamentos();
 	void InicializaProfessores();
 	void InicializaDisciplinas();
+	void InicializaAlunos();
 /*---------------------------------------------------------------------------------*/
 	void Executar();
 /*---------------------------------------------------------------------------------*/
@@ -54,4 +63,5 @@ public:
 	void UnivOndeProfsTrabalham();
 	void DepOndeProfsTrabalham();
 	void ListeDiscDeptos();
+	void ListeAlunosDisc();
 };

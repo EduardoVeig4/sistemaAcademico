@@ -1,8 +1,6 @@
 #pragma once
+#include "EveryThing.h"
 #include "Departamento.h"
-#include <vector> // Faz alocação e desalocação
-// #include <list>
-using namespace std;
 
 class Universidade {
 private:

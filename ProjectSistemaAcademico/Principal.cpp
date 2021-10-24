@@ -1,12 +1,8 @@
 #include "Principal.h"
-#include <iostream>
-#include <time.h>
-#include <Windows.h>
-using namespace std;
 
 int main() {
 	Principal obj;
-	obj.Executar();
+	obj.Executar(); // Execução do Objeto Principal
 }
 
 Principal::Principal() :
@@ -16,6 +12,12 @@ Principal::Principal() :
 	Newton(),
 	Simao(),
 
+	// Alunos
+	AAA(),
+	BBB(),
+	CCC(),
+	DDD(),
+
 	// Universidades:
 	UTFPR(),
 	Princeton(),
@@ -23,8 +25,8 @@ Principal::Principal() :
 
 	// Departamentos:
 	DAELN(),
-	MatematicaUTFPR(),
-	FisicaUTFPR(),
+	DAMAT(),
+	DAFIS(),
 
 	MatematicaCambridge(),
 	FisicaCambridge(),
@@ -57,8 +59,6 @@ Principal::Principal() :
 	// Na verdade, UTFPR é associado ao Simao via uma passagem por referência do 'endereço' dela.
 	//Simao.setUnivFiliado(&UTFPR);
 
-	// Executar(); // Execução do Objeto Principal
-
 	Inicializa();
 }
 
@@ -81,8 +81,8 @@ void Principal::InicializaUniversidades() {
 void Principal::InicializaDepartamentos() {
 	// Registro dos nomes dos departamentos
 	DAELN.setNome("Eletronica UTFPR");
-	MatematicaUTFPR.setNome("Matematica UTFPR");
-	FisicaUTFPR.setNome("Fisica UTFPR");
+	DAMAT.setNome("Matematica UTFPR");
+	DAFIS.setNome("Fisica UTFPR");
 	MatematicaPrinceton.setNome("Matematica Princeton");
 	FisicaPrinceton.setNome("Fisica Princeton");
 	MatematicaCambridge.setNome("Matematica Cambridge");
@@ -90,6 +90,8 @@ void Principal::InicializaDepartamentos() {
 
 	// Agragação dos Departamentos as Universidades
 	UTFPR.setDepartamento(&DAELN);
+	UTFPR.setDepartamento(&DAMAT);
+	UTFPR.setDepartamento(&DAFIS);
 	Princeton.setDepartamento(&FisicaPrinceton);
 	Cambridge.setDepartamento(&MatematicaCambridge);
 }
@@ -122,15 +124,26 @@ void Principal::InicializaDisciplinas() {
 	Computacao2_2007.setNome("Computação II");
 	Metodos2_2007.setNome("Métodos II");
 
-	DAELN.incluaDisciplina(&Computacao1_2006);
-	DAELN.incluaDisciplina(&Introd_Alg_2007);
-	DAELN.incluaDisciplina(&Computacao2_2007);
-	DAELN.incluaDisciplina(&Metodos2_2007);
-
 	Computacao1_2006.setDepartamento(&DAELN);
-	Introd_Alg_2007.setDepartamento(&DAELN);
 	Computacao2_2007.setDepartamento(&DAELN);
+	Introd_Alg_2007.setDepartamento(&DAELN);
 	Metodos2_2007.setDepartamento(&DAELN);
+
+	Computacao1_2006.incluaAluno(&AAA);
+	Computacao1_2006.incluaAluno(&BBB);
+	Computacao1_2006.incluaAluno(&CCC);
+	Computacao1_2006.incluaAluno(&DDD);
+
+	Computacao2_2007.incluaAluno(&AAA);
+	Computacao2_2007.incluaAluno(&CCC);
+	Computacao2_2007.incluaAluno(&DDD);
+}
+
+void Principal::InicializaAlunos() {
+	AAA.setNome("Eduardo");
+	BBB.setNome("Kendy");
+	CCC.setNome("Pontes");
+	DDD.setNome("Veiga");
 }
 
 void Principal::CalcIdadeProfs() {
@@ -162,6 +175,11 @@ void Principal::ListeDiscDeptos() {
 	printf("\n");
 }
 
+void Principal::ListeAlunosDisc() {
+	Computacao1_2006.listeAlunos();
+	printf("\n");
+}
+
 void Principal::Executar() {
 	CalcIdadeProfs();
 	UnivOndeProfsTrabalham();
@@ -169,4 +187,5 @@ void Principal::Executar() {
 	// ListeDepPorUniv();
 	// Metodos2.ListeAlunos();
 	ListeDiscDeptos();
+	ListeAlunosDisc();
 }

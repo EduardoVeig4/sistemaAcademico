@@ -1,9 +1,4 @@
 #include "Universidade.h"
-#include <string.h>
-#include <iostream>
-#include <vector>
-// #include <list>
-using namespace std;
 
 Universidade::~Universidade() {
 }

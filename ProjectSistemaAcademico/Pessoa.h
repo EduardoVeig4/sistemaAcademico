@@ -1,8 +1,6 @@
 #pragma once // Impede que a classe seja incluida mais de uma vez
-#include <stdio.h>
+#include "EveryThing.h"
 #include "Universidade.h"
-#include <iostream>
-using namespace std;
 
 class Pessoa {
 protected:

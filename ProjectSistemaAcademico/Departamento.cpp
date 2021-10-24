@@ -1,8 +1,6 @@
 #include "Departamento.h"
 #include "Universidade.h"
 #include "Disciplina.h"
-#include <string.h>
-#include <iostream>
 
 Departamento::Departamento(){
 	pDisciplPrim = NULL;
@@ -35,7 +33,11 @@ void Departamento::incluaDisciplina(Disciplina* pd) {
 		pDisciplAtual = pd;
 	}
 	else {
+		//pDisciplAtual->getProx() = pd;
+		//pd->getAnte() = pDisciplAtual;
+
 		pDisciplAtual->pProx = pd;
+		pd->pAnte = pDisciplAtual;
 		pDisciplAtual = pd;
 	}
 }
@@ -47,6 +49,15 @@ void Departamento::listeDisciplinas() {
 	while (pAux != NULL) {
 		//printf("A disciplina %s pertence ao Departamento %s \n", pAux->getNome(), nomeD);
 		cout << "A disciplina " << pAux->getNome() << " pertence ao Departamento " << nomeD << endl;
-		pAux = pAux->pProx;
+		pAux = pAux->getProx();
+	}
+}
+
+void Departamento::listeDisciplinas2() {
+	Disciplina* pAux;
+	pAux = pDisciplAtual;
+	while (pAux != NULL) {
+		cout << "A disciplina " << pAux->getNome() << " pertence ao Departamento " << nomeD << endl;
+		pAux = pAux->getAnte();
 	}
 }

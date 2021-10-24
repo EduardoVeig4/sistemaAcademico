@@ -142,6 +142,8 @@
     <ClInclude Include="Aluno.h" />
     <ClInclude Include="Departamento.h" />
     <ClInclude Include="Disciplina.h" />
+    <ClInclude Include="ElAluno.h" />
+    <ClInclude Include="EveryThing.h" />
     <ClInclude Include="Pessoa.h" />
     <ClInclude Include="Principal.h" />
     <ClInclude Include="Professor.h" />
@@ -151,6 +153,7 @@
     <ClCompile Include="Aluno.cpp" />
     <ClCompile Include="Departamento.cpp" />
     <ClCompile Include="Disciplina.cpp" />
+    <ClCompile Include="ElAluno.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="Professor.cpp" />
