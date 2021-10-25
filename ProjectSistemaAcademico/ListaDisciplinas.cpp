@@ -1,13 +1,13 @@
 #include "ListaDisciplinas.h"
 
-ListaDisciplinas::ListaDisciplinas(int nd, const char* n) {
+ListaDisciplinas::ListaDisciplinas(int nd/*, const char* n*/) {
 	num_disc = nd;
 	cont_disc = 0;
 
 	pElDisciplinaPrim = NULL;
 	pElDisciplinaAtual = NULL;
 
-	strcpy(nome, n);
+	//strcpy(nome, n);
 }
 
 ListaDisciplinas::~ListaDisciplinas() {
@@ -16,9 +16,10 @@ ListaDisciplinas::~ListaDisciplinas() {
 	paux1 = pElDisciplinaPrim;
 	paux2 = paux1;
 
+	// Desaloca todos os elementos da lista
 	while (paux1 != NULL) {
 		paux2 = paux1->pProx;
-		delete(paux1);
+		delete(paux1); // Libera a memória alocada dinamicamente
 		paux1 = paux2;
 	}
 
@@ -26,62 +27,84 @@ ListaDisciplinas::~ListaDisciplinas() {
 	pElDisciplinaAtual = NULL;
 }
 
+/*
 void ListaDisciplinas::setNome(const char* n) {
 	strcpy(nome, n);
 }
+*/
 
 void ListaDisciplinas::incluaDisciplina(Disciplina* pdi)
 {
-	if (
-		((cont_disc < num_disc) && (pdi != NULL)) ||
-		((num_disc == -1) && (pdi != NULL))
-		)
-	{
+	if (((cont_disc < num_disc) && (pdi != NULL)) ||((num_disc == -1) && (pdi != NULL))){
+
 		// Aqui é criado um ponteiro para LAluno
 		ElDisciplina* paux;
+
 		// Aqui é criado um objeto LAluno, sendo seu
 		// endereço armazenado em aux
 		paux = new ElDisciplina();
+
 		// Aqui recebe uma cópia do objeto interm.
 		paux->setDisciplina(pdi);
-		if (pElDisciplinaPrim == NULL)
-		{
+		if (pElDisciplinaPrim == NULL){
 			pElDisciplinaPrim = paux;
 			pElDisciplinaAtual = paux;
 		}
-		else
-		{
+		else{
 			pElDisciplinaAtual->pProx = paux;
 			paux->pAnte = pElDisciplinaAtual;
 			pElDisciplinaAtual = paux;
 		}
 		cont_disc++;
 	}
-	else
-	{
+	else{
 		cout << " Disciplina não incluída " << " Quantia de disc. já lotada em " << num_disc << " disciplinas." << endl;
 	}
 }
 
-void ListaDisciplinas::listeDisciplinas()
-{
+void ListaDisciplinas::listeDisciplinas(){
 	ElDisciplina* paux;
 	paux = pElDisciplinaPrim;
-	while (paux != NULL)
-	{
+	if (paux == NULL) {
+		cout << "nenhuma disciplina cadastrada" << endl;
+		return;
+	}
+
+	while (paux != NULL){
 		cout << " Disciplina " << paux->getNome()
-			<< " do deparatamento " << nome << "." << endl;
+			<< " do Departamento " << paux->getDepartamento()->getNome() << "." << endl;
 		paux = paux->pProx;
 	}
+	cout << endl;
 }
-void ListaDisciplinas::listeDisciplinas2()
-{
+
+/*
+void ListaDisciplinas::listeDisciplinas2(){
 	ElDisciplina* paux;
 	paux = pElDisciplinaAtual;
-	while (paux != NULL)
-	{
+
+	while (paux != NULL){
 		cout << " Disciplina " << paux->getNome()
 			<< " do Departamento " << nome << "." << endl;
 		paux = paux->pAnte;
 	}
+}
+*/
+
+// Localiza uma Disciplina de nome 'n' na lista de disciplinas
+Disciplina* ListaDisciplinas::localizar(char* n){
+	ElDisciplina* paux;
+	paux = pElDisciplinaPrim;
+
+	while (paux != NULL){
+		if (0 == strcmp(n, paux->getNome())){
+			return paux->getDisciplina();
+		}
+		paux = paux->pProx;
+	}
+	return NULL;
+}
+
+ElDisciplina* ListaDisciplinas::getDisciplinaPrim() {
+	return pElDisciplinaPrim;
 }

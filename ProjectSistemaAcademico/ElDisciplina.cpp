@@ -1,24 +1,20 @@
 #include "ElDisciplina.h"
 
-ElDisciplina::ElDisciplina()
-{
-	pProx = NULL;
-	pAnte = NULL;
-}
-ElDisciplina::~ElDisciplina()
-{
-	pProx = NULL;
-	pAnte = NULL;
-}
-void ElDisciplina::setDisciplina(Disciplina* pdi)
-{
+ElDisciplina::ElDisciplina() {}
+ElDisciplina::~ElDisciplina() {}
+
+void ElDisciplina::setDisciplina(Disciplina* pdi){
 	pDisciplina = pdi;
 }
-Disciplina* ElDisciplina::getDisciplina()
-{
+
+Disciplina* ElDisciplina::getDisciplina(){
 	return pDisciplina;
 }
-char* ElDisciplina::getNome()
-{
+
+char* ElDisciplina::getNome(){
 	return pDisciplina->getNome();
+}
+
+Departamento* ElDisciplina::getDepartamento() {
+	return pDisciplina->getDepartamento();
 }

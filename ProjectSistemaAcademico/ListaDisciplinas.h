@@ -7,19 +7,22 @@ class ListaDisciplinas{
 private:
 	int cont_disc;
 	int num_disc;
-	char nome[150];
+	//char nome[150];
 
 	ElDisciplina* pElDisciplinaPrim;
 	ElDisciplina* pElDisciplinaAtual;
 
 public:
-	ListaDisciplinas(int nd = 1000, const char* n = "");
+	ListaDisciplinas(int nd = 1000/*, const char* n = ""*/);
 	~ListaDisciplinas();
 
-	void setNome(const char* n);
+	//void setNome(const char* n);
 	void incluaDisciplina(Disciplina* pdi);
 
 	void listeDisciplinas();
-	void listeDisciplinas2();
+	//void listeDisciplinas2();
+
+	Disciplina* localizar(char* n);
+	ElDisciplina* getDisciplinaPrim();
 };
 

@@ -15,20 +15,20 @@ protected:
 
 public:
 
-	Pessoa(int diaNa, int mesNa, int anoNa, const char* nome = "");
-	Pessoa();
+	//Pessoa(int diaNa, int mesNa, int anoNa, const char* nome = "");
+	Pessoa(int id);
 	~Pessoa();
-/*---------------------------------------------------------------------------------*/
-	void inicializa(int diaNa, int mesNa, int anoNa, const char* nome = "");
-/*---------------------------------------------------------------------------------*/
+
+	void inicializa(int diaNa, int mesNa, int anoNa, const char* nome);
+
 	void calc_idade(int diaAT, int mesAT, int anoAT);
 	void imprime_idade();
 	void calc_idade_imprime(int diaAT, int mesAT, int anoAT);
 	int getIdade();
-/*---------------------------------------------------------------------------------*/
-	void setId(int i) { id = i; }
-	int getId() { return id; }
-/*---------------------------------------------------------------------------------*/
-	void setNome(char* n) { strcpy(nomeP, n); }
-	char* getNome() { return nomeP; }
+
+	void setId(int i);
+	int getId();
+
+	void setNome(const char* n);
+	char* getNome();
 };

@@ -18,5 +18,7 @@ public:
 	Disciplina* getDisciplina();
 
 	char* getNome();
+
+	Departamento* getDepartamento();
 };
 

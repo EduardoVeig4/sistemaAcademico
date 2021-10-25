@@ -16,6 +16,7 @@ public:
 
 	void setAluno(Aluno* pa);
 	Aluno* getAluno();
-	char* getNome();
+	const char* getNome();
+	Disciplina* getDisciplina();
 };
 

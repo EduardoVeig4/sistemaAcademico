@@ -1,10 +1,7 @@
 #include "Aluno.h"
 
-Aluno::Aluno(int diaNa, int mesNa, int anoNa, const char* nome) :
-Pessoa(diaNa, mesNa, anoNa, nome) { }
-
-void Aluno::setNome(const char* n){
-	strcpy(nome, n);
+Aluno::Aluno(int i):Pessoa(id) {
+	ra = 0;
 }
 
 void Aluno::setRA(int numRa) {
@@ -13,4 +10,16 @@ void Aluno::setRA(int numRa) {
 
 int Aluno::getRA() {
 	return ra;
+}
+
+void Aluno::setDisciplina(Disciplina* pd) {
+	pDiscAssociada = pd;
+}
+
+Disciplina* Aluno::getDisciplina() {
+	return pDiscAssociada;
+}
+
+int Aluno::getId() {
+	return id;
 }

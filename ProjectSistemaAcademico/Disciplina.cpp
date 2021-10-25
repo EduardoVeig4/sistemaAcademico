@@ -1,18 +1,18 @@
 #include "Disciplina.h"
 
-Disciplina::Disciplina(int na, const char* ac):
-ObjLAlunos(na, ac) // Construtor padrão
+Disciplina::Disciplina(int id, int tamanho_lista, const char* ac) :
+ObjLAlunos(tamanho_lista) // Construtor padrão
 
 {
 	pDeptoAssociado = NULL;
-	pProx = NULL;
-	pAnte = NULL;
+	//pProx = NULL;
+	//pAnte = NULL;
 	strcpy(area_conhecimento, ac);
 }
 
 Disciplina::~Disciplina() {
-	pProx = NULL;
-	pAnte = NULL;
+	//pProx = NULL;
+	//pAnte = NULL;
 	pDeptoAssociado = NULL;
 }
 
@@ -35,7 +35,7 @@ char* Disciplina::getNome() {
 void Disciplina::setDepartamento(Departamento* pdpto) {
 	pDeptoAssociado = pdpto;
 
-	pdpto->incluaDisciplina(this); // Inclui a Disciplina atual no Departamento
+	//pdpto->incluaDisciplina(this); // Inclui a Disciplina atual no Departamento
 }
 
 Departamento* Disciplina::getDepartamento() {
@@ -63,12 +63,16 @@ Disciplina* Disciplina::getAnte() {
 
 void Disciplina::incluaAluno(Aluno* pa){
 	ObjLAlunos.incluaAluno(pa);
+
+	pa->setDisciplina(this);
 }
 
 void Disciplina::listeAlunos() {
 	ObjLAlunos.listeAlunos();
 }
 
+/*
 void Disciplina::listeAlunos2() {
 	ObjLAlunos.listeAlunos2();
 }
+*/

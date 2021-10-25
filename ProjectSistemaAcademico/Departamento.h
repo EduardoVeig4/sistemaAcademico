@@ -9,26 +9,28 @@ class ListaDisciplinas;
 class Departamento{
 private:
 
-	char nomeD[130];
-/*---------------------------------------------------------------------------------*/
+	char nome[130];
+
 	// Associação para com uma Universidade
 	Universidade* pUniv;
-/*---------------------------------------------------------------------------------*/
+
 	// Associação para com várias Disciplinas
 	ListaDisciplinas* pObjLDisciplinas;
+	int id;
 
 public:
-	Departamento(); // Construtor
+	Departamento(int id); // Construtor
 	~Departamento(); // Destrutor
-/*---------------------------------------------------------------------------------*/
+
 	void setNome(const char* nomeD);
 	char* getNome();
-/*---------------------------------------------------------------------------------*/
+
 	void setUniversidade(Universidade* pu);
 	Universidade* getUniversidade();
-/*---------------------------------------------------------------------------------*/
+
 	void incluaDisciplina(Disciplina* pd);
 	void listeDisciplinas();
-	void listeDisciplinas2();
+	//void listeDisciplinas2();
+	int getId();
 };
 

@@ -1,13 +1,13 @@
 #include "ListaAlunos.h"
 
-ListaAlunos::ListaAlunos(int na, const char* n) {
+ListaAlunos::ListaAlunos(int na/*, const char* n*/) {
 	num_alunos = na;
 	cont_alunos = 0;
 
 	pElAlunoPrim = NULL;
 	pElAlunoAtual = NULL;
 
-	strcpy(nome, n);
+	//strcpy(nome, n);
 }
 
 ListaAlunos::~ListaAlunos() {
@@ -15,6 +15,7 @@ ListaAlunos::~ListaAlunos() {
 	paux1 = pElAlunoPrim;
 	paux2 = paux1;
 
+	// Desalocação
 	while (paux1 != NULL) {
 		paux2 = paux1->pProx;
 		delete(paux1); // libera a memória alocada para a lista Alunos, liberando-destruindo cada objeto criado dinamicamente
@@ -25,6 +26,7 @@ ListaAlunos::~ListaAlunos() {
 	pElAlunoAtual = NULL;
 }
 
+/*
 void ListaAlunos::setNome(const char* n) {
 	strcpy(nome, n);
 }
@@ -32,6 +34,7 @@ void ListaAlunos::setNome(const char* n) {
 char* ListaAlunos::getNome() {
 	return nome;
 }
+*/
 
 void ListaAlunos::incluaAluno(Aluno* pa) {
 	if ((cont_alunos < num_alunos) && (pa != NULL)) {
@@ -67,12 +70,24 @@ void ListaAlunos::incluaAluno(Aluno* pa) {
 void ListaAlunos::listeAlunos() {
 	ElAluno* paux = NULL;
 	paux = pElAlunoPrim;
+
+	if (paux == NULL) {
+		cout << "nenhum aluno cadastrado" << endl;
+		return;
+	}
+
 	while (paux != NULL) {
-		cout << "Aluno " << paux->getNome() << " matriculado em " << nome << "\n" << endl;
+		cout << "Aluno " << paux->getNome() << " matriculado em " << paux->getDisciplina()->getNome() << endl;
 		paux = paux->pProx;
 	}
+	cout << endl; // Equivalente a \n
 }
 
+
+ElAluno* ListaAlunos::getAlunoPrim() {
+	return pElAlunoPrim;
+}
+/*
 void ListaAlunos::listeAlunos2() {
 	ElAluno* paux = NULL;
 	paux = pElAlunoAtual;
@@ -81,3 +96,4 @@ void ListaAlunos::listeAlunos2() {
 		paux = paux->pAnte;
 	}
 }
+*/

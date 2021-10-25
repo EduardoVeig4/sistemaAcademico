@@ -1,13 +1,13 @@
 #include "Professor.h"
 
 Professor::Professor(int diaNa, int mesNa, int anoNa, const char* nome):
-Pessoa(diaNa, mesNa, anoNa, nome){
+Pessoa(id){
 		pUnivFiliado = NULL;
 		pDptoFiliado = NULL;
 }
 
 Professor::Professor() :
-Pessoa() {
+Pessoa(id) {
 	pUnivFiliado = NULL;
 	pDptoFiliado = NULL;
 }

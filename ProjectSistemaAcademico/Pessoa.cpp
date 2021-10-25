@@ -1,18 +1,14 @@
 #include "Pessoa.h"
 
 // Função Construtora
-Pessoa::Pessoa(int diaNa, int mesNa, int anoNa, const char* nome) {
-	inicializa(diaNa, mesNa, anoNa, nome);
-}
-
-Pessoa::Pessoa() {
-	inicializa(0, 0, 0);
+Pessoa::Pessoa(int Id): nomeP("") {
+	id = Id;
+	idadeP = 0;
 }
 
 Pessoa::~Pessoa(){}
 
 void Pessoa::inicializa(int diaNa, int mesNa, int anoNa, const char* nome) {
-	idadeP = 0;
 	diaP = diaNa;
 	mesP = mesNa;
 	anoP = anoNa;
@@ -42,4 +38,19 @@ void Pessoa::calc_idade_imprime(int diaAT, int mesAT, int anoAT) {
 
 int Pessoa::getIdade() {
 	return idadeP;
+}
+
+void Pessoa::setId(int i) {
+	id = i;
+}
+int Pessoa::getId() {
+	return id;
+}
+
+void Pessoa::setNome(const char* n) {
+	strcpy(nomeP, n);
+}
+
+char* Pessoa::getNome() {
+	return nomeP;
 }

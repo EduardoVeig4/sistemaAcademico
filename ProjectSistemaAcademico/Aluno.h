@@ -7,20 +7,21 @@ class Departamento;
 
 class Aluno : public Pessoa{
 private:
-	Universidade* pUnivFiliado;
+	//Universidade* pUnivFiliado;
 
-/*---------------------------------------------------------------------------------*/
 	int ra;
-	char nome[30];
+
+	Disciplina* pDiscAssociada;
 
 public:
-	Aluno(int diaNa, int mesNa, int anoNa, const char* nome = "");
-	Aluno(int i = -1);
+	Aluno(int i);
 	~Aluno();
-/*---------------------------------------------------------------------------------*/
-	void setNome(const char* nome);
 
 	void setRA(int numRa);
 	int getRA();
+
+	void setDisciplina(Disciplina* pd);
+	Disciplina* getDisciplina();
+	int getId();
 };
 

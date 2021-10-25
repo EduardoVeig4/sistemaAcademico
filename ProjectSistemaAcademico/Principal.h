@@ -7,6 +7,9 @@
 #include "Disciplina.h"
 #include "Aluno.h"
 #include "ListaAlunos.h"
+#include "ListaUniversidades.h"
+#include "ListaDepartamentos.h"
+#include "ListaDisciplinas.h"
 
 class Principal {
 private:
@@ -16,7 +19,7 @@ private:
 	Universidade UTFPR;
 	Universidade Princeton;
 	Universidade Cambridge;
-/*---------------------------------------------------------------------------------*/
+
 	// Departamentos
 	Departamento DAELN;
 	Departamento DAMAT;
@@ -27,21 +30,18 @@ private:
 
 	Departamento FisicaCambridge;
 	Departamento MatematicaCambridge;
-/*---------------------------------------------------------------------------------*/
+
 	// Professores
 	Professor Simao;
 	Professor Einstein;
 	Professor Newton;
-/*---------------------------------------------------------------------------------*/
+
 	// Disciplinas
 	Disciplina Computacao1_2006;
 	Disciplina Introd_Alg_2007;
 	Disciplina Computacao2_2007;
 	Disciplina Metodos2_2007;
-/*---------------------------------------------------------------------------------*/
-	// Lista de Alunos da Disciplina
-	
-/*---------------------------------------------------------------------------------*/
+
 	// Alunos
 	Aluno AAA;
 	Aluno BBB;
@@ -50,10 +50,16 @@ private:
 
 	int diaAtual, mesAtual, anoAtual;
 
+	// Criação dos Objetos dinamicamente
+	ListaUniversidades LUniversidades;
+	ListaDepartamentos LDepartamentos;
+	ListaDisciplinas LDisciplinas;
+	ListaAlunos LAlunos;
+
 public:
 	Principal();
 	~Principal();
-/*---------------------------------------------------------------------------------*/
+
 	// Inicializações
 	void Inicializa();
 	void InicializaUniversidades();
@@ -61,12 +67,20 @@ public:
 	void InicializaProfessores();
 	void InicializaDisciplinas();
 	void InicializaAlunos();
-/*---------------------------------------------------------------------------------*/
+
 	void Executar();
-/*---------------------------------------------------------------------------------*/
+
 	void CalcIdadeProfs();
 	void UnivOndeProfsTrabalham();
 	void DepOndeProfsTrabalham();
 	void ListeDiscDeptos();
 	void ListeAlunosDisc();
+
+	void CadDisciplina();
+	void CadDepartamento();
+	void CadUniversidade();
+
+	void Menu();
+	void MenuCad();
+	void MenuExe();
 };

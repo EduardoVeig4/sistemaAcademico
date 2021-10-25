@@ -1,11 +1,7 @@
 #include "Principal.h"
 
-int main() {
-	Principal obj;
-	obj.Executar(); // Execução do Objeto Principal
-}
-
 Principal::Principal() :
+
 	// Chamar a construtora sem parâmetros é opcional, o C++ chama implicitamente, porém é recomendável chamá-la
 	// Professores:
 	Einstein(),
@@ -13,32 +9,33 @@ Principal::Principal() :
 	Simao(),
 
 	// Alunos
-	AAA(),
-	BBB(),
-	CCC(),
-	DDD(),
+	AAA(0),
+	BBB(1),
+	CCC(2),
+	DDD(3),
 
 	// Universidades:
-	UTFPR(),
-	Princeton(),
-	Cambridge(),
+	UTFPR(0),
+	Princeton(1),
+	Cambridge(2),
 
 	// Departamentos:
-	DAELN(),
-	DAMAT(),
-	DAFIS(),
+	DAELN(0),
+	DAMAT(1),
+	DAFIS(2),
 
-	MatematicaCambridge(),
-	FisicaCambridge(),
+	MatematicaCambridge(3),
+	FisicaCambridge(4),
 
-	MatematicaPrinceton(),
-	FisicaPrinceton(),
+	MatematicaPrinceton(5),
+	FisicaPrinceton(6),
 
 	// Disciplinas
-	Computacao1_2006(),
-	Computacao2_2007(),
-	Introd_Alg_2007(),
-	Metodos2_2007()
+	Computacao1_2006(0),
+	Computacao2_2007(1),
+	Introd_Alg_2007(2),
+	Metodos2_2007(3)
+
 
 {
 	/*
@@ -89,11 +86,11 @@ void Principal::InicializaDepartamentos() {
 	FisicaCambridge.setNome("Fisica Cambridge");
 
 	// Agragação dos Departamentos as Universidades
-	UTFPR.setDepartamento(&DAELN);
-	UTFPR.setDepartamento(&DAMAT);
-	UTFPR.setDepartamento(&DAFIS);
-	Princeton.setDepartamento(&FisicaPrinceton);
-	Cambridge.setDepartamento(&MatematicaCambridge);
+	UTFPR.incluaDepartamento(&DAELN);
+	UTFPR.incluaDepartamento(&DAMAT);
+	UTFPR.incluaDepartamento(&DAFIS);
+	Princeton.incluaDepartamento(&FisicaPrinceton);
+	Cambridge.incluaDepartamento(&MatematicaCambridge);
 }
 
 void Principal::InicializaProfessores() {
@@ -180,6 +177,114 @@ void Principal::ListeAlunosDisc() {
 	printf("\n");
 }
 
+// Menu ------------------------------------------------------------------------------------------------------
+void Principal::Menu() {
+	int op = -1;
+
+	while (op != 3) {
+
+		// O comando system nos permite dizer como o console irá se comportar
+		system("cls"); // Comando para limpar a tela 'Clear Screen'
+		cout << "Informe sua opção:    " << endl;
+		cout << "1 - Cadastrar:        " << endl;
+		cout << "2 - Executar:         " << endl;
+		cout << "3 - Sair.             " << endl;
+		cin >> op;
+
+
+		switch (op) {
+		case 1: { MenuCad(); }
+			  break;
+
+		case 2: { MenuExe(); }
+			  break;
+
+		case 3: { cout << "FIM" << endl; }
+			  break;
+
+		default: { 
+			cout << "Opção inválida." << endl;
+			system("Pause"); // Pause no console
+		}
+		}
+	}
+}
+
+void Principal::MenuCad() {
+	int op = -1;
+
+	while (op != 4) {
+		system("cls");
+		cout << "Informe sua opção:    " << endl;
+		cout << "1 - Cadastrar Disciplina." << endl;
+		cout << "2 - Cadastrar Departamentos." << endl;
+		cout << "3 - Cadastrar Universidade." << endl;
+		cout << "4 - Sair.             " << endl;
+		cin >> op;
+
+		switch (op) {
+		case 1: { CadDisciplina(); }
+			  break;
+
+		case 2: { CadDepartamento(); }
+			  break;
+
+		case 3: { CadUniversidade(); }
+			  break;
+
+		case 4: { cout << "FIM" << endl; }
+			  break;
+
+		default: {
+			cout << "Opção Inválida." << endl;
+			getchar();
+		}
+		}
+	}
+}
+
+void Principal::MenuExe() {
+	int op = -1;
+
+	while (op != 4) {
+		system("cls");
+		cout << "Informe sua opção:    " << endl;
+		cout << "1 - Listat Disciplina." << endl;
+		cout << "2 - Listar Departamentos." << endl;
+		cout << "3 - Listar Universidade." << endl;
+		cout << "4 - Sair.             " << endl;
+		cin >> op;
+
+		switch (op) {
+		case 1: { LDisciplinas.listeDisciplinas();
+			fflush(stdin);
+			getchar();
+		}
+			  break;
+
+		case 2: { LDepartamentos.listeDepartamentos();
+			fflush(stdin);
+			getchar();
+		}
+			  break;
+
+		case 3: { LUniversidades.listeUniversidades();
+			fflush(stdin);
+			getchar();
+		}
+			  break;
+
+		case 4: { cout << "FIM" << endl; }
+			  break;
+
+		default: {
+			cout << "Opção Inválida." << endl;
+			getchar();
+		}
+		}
+	}
+}
+
 void Principal::Executar() {
 	CalcIdadeProfs();
 	UnivOndeProfsTrabalham();
@@ -188,4 +293,5 @@ void Principal::Executar() {
 	// Metodos2.ListeAlunos();
 	ListeDiscDeptos();
 	ListeAlunosDisc();
+	Menu();
 }

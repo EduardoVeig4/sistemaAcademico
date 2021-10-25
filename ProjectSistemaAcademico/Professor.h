@@ -16,9 +16,10 @@ public:
 	Professor(int diaNa, int mesNa, int anoNa, const char* nome = "");
 	Professor();
 	~Professor();
-/*---------------------------------------------------------------------------------*/
+
 	void setUnivFiliado(Universidade* pu);
 	void setDepartamento(Departamento* pdpto);
+
 	void OndeTrabalho();
 	void QualDepartamentoTrabalho();
 };

@@ -143,8 +143,12 @@
     <ClInclude Include="Departamento.h" />
     <ClInclude Include="Disciplina.h" />
     <ClInclude Include="ElAluno.h" />
+    <ClInclude Include="ElDepartamento.h" />
     <ClInclude Include="ElDisciplina.h" />
+    <ClInclude Include="ElUniversidade.h" />
+    <ClInclude Include="ListaDepartamentos.h" />
     <ClInclude Include="ListaDisciplinas.h" />
+    <ClInclude Include="ListaUniversidades.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="ListaAlunos.h" />
     <ClInclude Include="Pessoa.h" />
@@ -157,9 +161,14 @@
     <ClCompile Include="Departamento.cpp" />
     <ClCompile Include="Disciplina.cpp" />
     <ClCompile Include="ElAluno.cpp" />
+    <ClCompile Include="ElDepartamento.cpp" />
     <ClCompile Include="ElDisciplina.cpp" />
+    <ClCompile Include="ElUniversidade.cpp" />
     <ClCompile Include="ListaAlunos.cpp" />
+    <ClCompile Include="ListaDepartamentos.cpp" />
     <ClCompile Include="ListaDisciplinas.cpp" />
+    <ClCompile Include="ListaUniversidades.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="Professor.cpp" />
