@@ -232,7 +232,7 @@ void Principal::Menu() {
 		default: { 
 			cout << "Opção inválida." << endl;
 			system("Pause"); // Pause no console
-			break;
+			//break;
 		}
 		}
 	}
@@ -280,6 +280,7 @@ void Principal::MenuCad() {
 		default: {
 			cout << "Opção Inválida." << endl;
 			system("pause");
+			//break;
 		}
 		}
 	}
@@ -345,6 +346,7 @@ void Principal::MenuExe() {
 		default:
 			cout << "opcao Invalida." << endl;
 			system("pause");
+			//break;
 		}
 	}
 }
@@ -410,6 +412,7 @@ void Principal::MenuGravar()
 		default:
 			cout << "opcao Invalida." << endl;
 			system("pause");
+			//break;
 		}
 	}
 }
@@ -428,6 +431,7 @@ void Principal::MenuRecuperar() {
 		cout << " 4 - Recuperar Alunos. " << endl;
 		cout << " 5 - Sair. " << endl;
 		cin >> op;
+
 		switch (op)
 		{
 		case 0:
@@ -462,6 +466,7 @@ void Principal::MenuRecuperar() {
 		default:
 			cout << "opcao Invalida." << endl;
 			system("pause");
+			//break;
 		}
 	}
 }

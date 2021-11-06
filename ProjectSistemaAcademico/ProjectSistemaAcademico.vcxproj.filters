@@ -81,6 +81,9 @@
     <ClInclude Include="Professor.h">
       <Filter>Arquivos de Cabeçalho\classes-base</Filter>
     </ClInclude>
+    <ClInclude Include="Elemento.h">
+      <Filter>Arquivos de Cabeçalho\classes-encapsulamento</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Principal.cpp">

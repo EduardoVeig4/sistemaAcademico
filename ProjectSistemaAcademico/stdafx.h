@@ -15,4 +15,5 @@ using std::cout; // inclui a biblioteca inteira 'using namespaca std;' ou soment
 using std::endl;
 using std::cin;
 
-using namespace std;
+#include <string>
+using std::string;

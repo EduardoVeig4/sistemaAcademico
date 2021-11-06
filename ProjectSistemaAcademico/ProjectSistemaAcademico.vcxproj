@@ -145,6 +145,7 @@
     <ClInclude Include="ElAluno.h" />
     <ClInclude Include="ElDepartamento.h" />
     <ClInclude Include="ElDisciplina.h" />
+    <ClInclude Include="Elemento.h" />
     <ClInclude Include="ElUniversidade.h" />
     <ClInclude Include="ListaDepartamentos.h" />
     <ClInclude Include="ListaDisciplinas.h" />
