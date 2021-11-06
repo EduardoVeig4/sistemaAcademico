@@ -1,15 +1,5 @@
-﻿  Aluno.cpp
-  Departamento.cpp
-  Disciplina.cpp
-  ElAluno.cpp
-  ElDisciplina.cpp
-  ListaAlunos.cpp
-C:\Users\epont\source\repos\ProjectSistemaAcademico\ProjectSistemaAcademico\ListaAlunos.cpp(80,85): error C2027: uso de tipo indefinido 'Disciplina'
-C:\Users\epont\source\repos\ProjectSistemaAcademico\ProjectSistemaAcademico\Departamento.h(6): message : consulte a declaração de 'Disciplina'
-  ListaDisciplinas.cpp
-  Main.cpp
-  Pessoa.cpp
-  Principal.cpp
-  Professor.cpp
+﻿  ListaDisciplinas.cpp
+  ListaUniversidades.cpp
   Universidade.cpp
   Gerando Código...
+  ProjectSistemaAcademico.vcxproj -> C:\Users\epont\source\repos\ProjectSistemaAcademico\x64\Debug\ProjectSistemaAcademico.exe

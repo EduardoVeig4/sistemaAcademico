@@ -2,11 +2,12 @@
 #include "stdafx.h"
 
 #include "ElDisciplina.h"
+#include "Disciplina.h"
 
 class ListaDisciplinas{
 private:
 	int cont_disc;
-	int num_disc;
+	int numero_disc;
 	//char nome[150];
 
 	ElDisciplina* pElDisciplinaPrim;
@@ -23,6 +24,7 @@ public:
 	//void listeDisciplinas2();
 
 	Disciplina* localizar(char* n);
+
 	ElDisciplina* getDisciplinaPrim();
 };
 

@@ -22,13 +22,13 @@ public:
 	Departamento(int id); // Construtor
 	~Departamento(); // Destrutor
 
-	void setNome(const char* nomeD);
+	void setNome(const char* n);
 	char* getNome();
 
 	void setUniversidade(Universidade* pu);
 	Universidade* getUniversidade();
 
-	void incluaDisciplina(Disciplina* pd);
+	void incluaDisciplina(Disciplina* pdi);
 	void listeDisciplinas();
 	//void listeDisciplinas2();
 	int getId();

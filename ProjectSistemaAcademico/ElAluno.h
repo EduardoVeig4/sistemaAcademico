@@ -5,7 +5,7 @@
 
 class ElAluno{
 private:
-	Aluno* pAL;
+	Aluno* pAluno;
 	
 public:
 	ElAluno();
@@ -16,7 +16,9 @@ public:
 
 	void setAluno(Aluno* pa);
 	Aluno* getAluno();
+
 	const char* getNome();
+
 	Disciplina* getDisciplina();
 };
 

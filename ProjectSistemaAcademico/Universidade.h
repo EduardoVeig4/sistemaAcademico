@@ -5,7 +5,7 @@
 
 class Universidade {
 private:
-	char nomeU[30];
+	char nome[30];
 	ListaDepartamentos ObjLDepartamentos;
 	int id;
 
@@ -17,7 +17,7 @@ public:
 	Universidade(int id); // Construtor
 	~Universidade(); // Destrutor
 
-	void setNome(const char* nome = "");
+	void setNome(const char* n);
 	char* getNome();
 	
 	void incluaDepartamento(Departamento* pd);

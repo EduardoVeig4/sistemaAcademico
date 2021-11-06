@@ -1,7 +1,8 @@
 #include "ListaDisciplinas.h"
 
+// Construtora e Destrutora
 ListaDisciplinas::ListaDisciplinas(int nd/*, const char* n*/) {
-	num_disc = nd;
+	numero_disc = nd;
 	cont_disc = 0;
 
 	pElDisciplinaPrim = NULL;
@@ -35,7 +36,7 @@ void ListaDisciplinas::setNome(const char* n) {
 
 void ListaDisciplinas::incluaDisciplina(Disciplina* pdi)
 {
-	if (((cont_disc < num_disc) && (pdi != NULL)) ||((num_disc == -1) && (pdi != NULL))){
+	if (((cont_disc < numero_disc) && (pdi != NULL)) ||((numero_disc == -1) && (pdi != NULL))){
 
 		// Aqui é criado um ponteiro para LAluno
 		ElDisciplina* paux;
@@ -46,6 +47,7 @@ void ListaDisciplinas::incluaDisciplina(Disciplina* pdi)
 
 		// Aqui recebe uma cópia do objeto interm.
 		paux->setDisciplina(pdi);
+
 		if (pElDisciplinaPrim == NULL){
 			pElDisciplinaPrim = paux;
 			pElDisciplinaAtual = paux;
@@ -58,7 +60,7 @@ void ListaDisciplinas::incluaDisciplina(Disciplina* pdi)
 		cont_disc++;
 	}
 	else{
-		cout << " Disciplina não incluída " << " Quantia de disc. já lotada em " << num_disc << " disciplinas." << endl;
+		cout << " Disciplina não incluída " << " Quantia de disc. já lotada em " << numero_disc << " disciplinas." << endl;
 	}
 }
 

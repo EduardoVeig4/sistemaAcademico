@@ -1,4 +1,6 @@
 #pragma once
+#include "stdafx.h"
+
 #include "Universidade.h"
 
 class ElUniversidade
@@ -8,9 +10,12 @@ private:
 public:
 	ElUniversidade();
 	~ElUniversidade();
+
 	ElUniversidade* pProx;
 	ElUniversidade* pAnte;
+
 	void setUniversidade(Universidade* pa);
 	Universidade* getUniversidade();
+
 	const char* getNome();
 };

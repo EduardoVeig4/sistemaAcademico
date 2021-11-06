@@ -3,6 +3,7 @@
 #include "Disciplina.h"
 #include "ListaDisciplinas.h"
 
+// Construtora e Destrutora
 Departamento::Departamento(int Id){
 	id = Id;
 	pObjLDisciplinas = new ListaDisciplinas(-1);
@@ -14,6 +15,7 @@ Departamento::~Departamento(){
 	}
 }
 
+// Sets e Gets
 void Departamento::setNome(const char* n) {
 	strcpy(nome, n);
 }
@@ -34,8 +36,9 @@ int Departamento::getId() {
 }
 
 // Métodos de inclusão na lista e de listagem
-void Departamento::incluaDisciplina(Disciplina* pd) {
-	pObjLDisciplinas->incluaDisciplina(pd);
+void Departamento::incluaDisciplina(Disciplina* pdi) {
+	pObjLDisciplinas->incluaDisciplina(pdi);
+	pdi->setDepartamento(this);
 }
 
 void Departamento::listeDisciplinas() {

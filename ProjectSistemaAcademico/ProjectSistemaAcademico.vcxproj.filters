@@ -13,105 +13,123 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Arquivos de Cabeçalho\classes-base">
+      <UniqueIdentifier>{19b1e9e5-060b-490c-bee4-79143003aad1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\classes-encapsulamento">
+      <UniqueIdentifier>{a34a18ea-9e80-4b28-b0e2-30d8d9376d98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\listas">
+      <UniqueIdentifier>{fcee978b-4709-4ada-a92f-2f915ad3cfe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\classes-base">
+      <UniqueIdentifier>{d52c1c21-d2b4-4816-ab56-2da8906055f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\classes-encapsulamento">
+      <UniqueIdentifier>{785a90a8-da29-4d62-9146-2a9cc410034d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\listas">
+      <UniqueIdentifier>{dcc36f87-027f-4606-bca3-2b99888a51ae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Pessoa.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
     <ClInclude Include="Principal.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Universidade.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Departamento.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Professor.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Aluno.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Disciplina.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="ElAluno.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="ListaAlunos.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
+    <ClInclude Include="Aluno.h">
+      <Filter>Arquivos de Cabeçalho\classes-base</Filter>
+    </ClInclude>
+    <ClInclude Include="Departamento.h">
+      <Filter>Arquivos de Cabeçalho\classes-base</Filter>
+    </ClInclude>
+    <ClInclude Include="Disciplina.h">
+      <Filter>Arquivos de Cabeçalho\classes-base</Filter>
+    </ClInclude>
+    <ClInclude Include="Pessoa.h">
+      <Filter>Arquivos de Cabeçalho\classes-base</Filter>
+    </ClInclude>
+    <ClInclude Include="Universidade.h">
+      <Filter>Arquivos de Cabeçalho\classes-base</Filter>
+    </ClInclude>
+    <ClInclude Include="ElAluno.h">
+      <Filter>Arquivos de Cabeçalho\classes-encapsulamento</Filter>
     </ClInclude>
     <ClInclude Include="ElDisciplina.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="ListaDisciplinas.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="ListaDepartamentos.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="ListaUniversidades.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
+      <Filter>Arquivos de Cabeçalho\classes-encapsulamento</Filter>
     </ClInclude>
     <ClInclude Include="ElDepartamento.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
+      <Filter>Arquivos de Cabeçalho\classes-encapsulamento</Filter>
     </ClInclude>
     <ClInclude Include="ElUniversidade.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
+      <Filter>Arquivos de Cabeçalho\classes-encapsulamento</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaAlunos.h">
+      <Filter>Arquivos de Cabeçalho\listas</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaDepartamentos.h">
+      <Filter>Arquivos de Cabeçalho\listas</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaDisciplinas.h">
+      <Filter>Arquivos de Cabeçalho\listas</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaUniversidades.h">
+      <Filter>Arquivos de Cabeçalho\listas</Filter>
+    </ClInclude>
+    <ClInclude Include="Professor.h">
+      <Filter>Arquivos de Cabeçalho\classes-base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pessoa.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
     <ClCompile Include="Principal.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Universidade.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Departamento.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Professor.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Aluno.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Disciplina.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="ElAluno.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="ListaAlunos.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="ElDisciplina.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="ListaDisciplinas.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="ListaDepartamentos.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="ListaUniversidades.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="ElDepartamento.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="ElUniversidade.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="Aluno.cpp">
+      <Filter>Arquivos de Origem\classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="Departamento.cpp">
+      <Filter>Arquivos de Origem\classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="Disciplina.cpp">
+      <Filter>Arquivos de Origem\classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="Pessoa.cpp">
+      <Filter>Arquivos de Origem\classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="Universidade.cpp">
+      <Filter>Arquivos de Origem\classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="Professor.cpp">
+      <Filter>Arquivos de Origem\classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="ElAluno.cpp">
+      <Filter>Arquivos de Origem\classes-encapsulamento</Filter>
+    </ClCompile>
+    <ClCompile Include="ElDepartamento.cpp">
+      <Filter>Arquivos de Origem\classes-encapsulamento</Filter>
+    </ClCompile>
+    <ClCompile Include="ElDisciplina.cpp">
+      <Filter>Arquivos de Origem\classes-encapsulamento</Filter>
+    </ClCompile>
+    <ClCompile Include="ElUniversidade.cpp">
+      <Filter>Arquivos de Origem\classes-encapsulamento</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaUniversidades.cpp">
+      <Filter>Arquivos de Origem\listas</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaDisciplinas.cpp">
+      <Filter>Arquivos de Origem\listas</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaAlunos.cpp">
+      <Filter>Arquivos de Origem\listas</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaDepartamentos.cpp">
+      <Filter>Arquivos de Origem\listas</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

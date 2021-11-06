@@ -1,20 +1,19 @@
-#include "stdafx.h"
-
 #include "Universidade.h"
 
-Universidade::~Universidade() {
-}
-
+// Construtora e destrutora
 Universidade::Universidade(int Id) {
 	id = Id;
 }
 
-void Universidade::setNome(const char* nome){
-	strcpy(nomeU, nome);
+Universidade::~Universidade() { }
+
+// Gets e Sets
+void Universidade::setNome(const char* n){
+	strcpy(nome, n);
 }
 
 char* Universidade::getNome(){
-	return nomeU;
+	return nome;
 }
 
 int Universidade::getId() {

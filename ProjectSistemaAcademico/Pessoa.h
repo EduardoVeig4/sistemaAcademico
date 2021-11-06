@@ -2,6 +2,7 @@
 #include "stdafx.h"
 
 #include "Universidade.h"
+#include <string>
 
 class Pessoa {
 protected:
@@ -22,9 +23,9 @@ public:
 	void inicializa(int diaNa, int mesNa, int anoNa, const char* nome);
 
 	void calc_idade(int diaAT, int mesAT, int anoAT);
+	int getIdade();
 	void imprime_idade();
 	void calc_idade_imprime(int diaAT, int mesAT, int anoAT);
-	int getIdade();
 
 	void setId(int i);
 	int getId();

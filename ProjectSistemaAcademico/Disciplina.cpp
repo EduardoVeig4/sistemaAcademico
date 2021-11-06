@@ -1,8 +1,9 @@
 #include "Disciplina.h"
+#include <string>
 
+// Construtora e Destrutora
 Disciplina::Disciplina(int id, int tamanho_lista, const char* ac) :
 ObjLAlunos(tamanho_lista) // Construtor padrão
-
 {
 	pDeptoAssociado = NULL;
 	//pProx = NULL;
@@ -16,6 +17,7 @@ Disciplina::~Disciplina() {
 	pDeptoAssociado = NULL;
 }
 
+// Gets e Sets
 void Disciplina::setId(int n) {
 	id = n;
 }
@@ -28,12 +30,12 @@ void Disciplina::setNome(const char* n) {
 	strcpy(nome, n);
 }
 
-char* Disciplina::getNome() {
+const char* Disciplina::getNome() {
 	return nome;
 }
 
-void Disciplina::setDepartamento(Departamento* pdpto) {
-	pDeptoAssociado = pdpto;
+void Disciplina::setDepartamento(Departamento* pd) {
+	pDeptoAssociado = pd;
 
 	//pdpto->incluaDisciplina(this); // Inclui a Disciplina atual no Departamento
 }
@@ -61,6 +63,8 @@ Disciplina* Disciplina::getAnte() {
 }
 */
 
+
+// Métodos de inclusão e de listagem
 void Disciplina::incluaAluno(Aluno* pa){
 	ObjLAlunos.incluaAluno(pa);
 

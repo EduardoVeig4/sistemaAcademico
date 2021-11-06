@@ -2,6 +2,7 @@
 
 // classe de encapsulamento para a classe departamento
 
+// Construtora e Destrutora
 ElDepartamento::ElDepartamento() {}
 ElDepartamento::~ElDepartamento() {}
 

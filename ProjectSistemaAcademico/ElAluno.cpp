@@ -1,21 +1,25 @@
 #include "ElAluno.h"
 
 // Classe de enclapsulamento para a classe Aluno
+
+// Construtora e Destrutora
 ElAluno::ElAluno(){}
 ElAluno::~ElAluno(){}
 
+
+// Gets e Sets
 void ElAluno::setAluno(Aluno* pa) {
-	pAL = pa;
+	pAluno = pa;
 }
 
 Aluno* ElAluno::getAluno() {
-	return pAL;
+	return pAluno;
 }
 
 const char* ElAluno::getNome() {
-	return pAL->getNome();
+	return pAluno->getNome();
 }
 
 Disciplina* ElAluno::getDisciplina() {
-	return pAL->getDisciplina();
+	return pAluno->getDisciplina();
 }

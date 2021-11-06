@@ -2,18 +2,18 @@
 
 // classe de encapsulamento para a classe universidade
 
+// Construtora e Destrutora
 ElUniversidade::ElUniversidade() {}
 ElUniversidade::~ElUniversidade() {}
 
-void ElUniversidade::setUniversidade(Universidade *pa)
-{
+void ElUniversidade::setUniversidade(Universidade *pa){
 	pUniversidade = pa;
 }
-Universidade* ElUniversidade::getUniversidade()
-{
+
+Universidade* ElUniversidade::getUniversidade(){
 	return pUniversidade;
 }
-const char* ElUniversidade::getNome()
-{
+
+const char* ElUniversidade::getNome(){
 	return pUniversidade->getNome();
 }

@@ -3,15 +3,16 @@
 #include "ListaDepartamentos.h"
 #include "Universidade.h"
 
-ListaDepartamentos::ListaDepartamentos(int nd)
-{
+
+// Construtora e Destrutora
+ListaDepartamentos::ListaDepartamentos(int nd){
 	numero_disc = nd;
 	cont_disc = 0;
 	pElDepartamentoPrim = NULL;
 	pElDepartamentoAtual = NULL;
 }
-ListaDepartamentos::~ListaDepartamentos()
-{
+
+ListaDepartamentos::~ListaDepartamentos(){
 	ElDepartamento *paux1, *paux2;
 	paux1 = pElDepartamentoPrim;
 	paux2 = paux1;
@@ -25,13 +26,14 @@ ListaDepartamentos::~ListaDepartamentos()
 	pElDepartamentoPrim = NULL;
 	pElDepartamentoAtual = NULL;
 }
+
 // inclui um novo departamento se houver espaco e a entrada for valida
 void ListaDepartamentos::incluaDepartamento(Departamento* pdi){
-	ElDepartamento* paux;
-	paux = new ElDepartamento();
-	paux->setDepartamento(pdi);
-
 	if (((cont_disc < numero_disc) && (pdi != NULL)) || ((numero_disc == -1) && (pdi != NULL))){
+		ElDepartamento* paux;
+		paux = new ElDepartamento();
+		paux->setDepartamento(pdi);
+
 		if (pElDepartamentoPrim == NULL){
 			pElDepartamentoPrim = paux;
 			pElDepartamentoAtual = paux;
@@ -47,9 +49,9 @@ void ListaDepartamentos::incluaDepartamento(Departamento* pdi){
 		cout << " Departamento não incluída " << " Quantia de disc. já lotada em " << numero_disc << " Departamentos." << endl;
 	}
 }
+
 // percorre todos os elementos, mostrando-os em tela um a um
-void ListaDepartamentos::listeDepartamentos()
-{
+void ListaDepartamentos::listeDepartamentos(){
 	ElDepartamento* paux;
 	paux = pElDepartamentoPrim;
 	if (paux == NULL) {

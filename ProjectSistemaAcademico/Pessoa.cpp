@@ -1,6 +1,6 @@
 #include "Pessoa.h"
 
-// Função Construtora
+// Construtora e Destrutora
 Pessoa::Pessoa(int Id): nomeP("") {
 	id = Id;
 	idadeP = 0;
@@ -8,6 +8,8 @@ Pessoa::Pessoa(int Id): nomeP("") {
 
 Pessoa::~Pessoa(){}
 
+
+// Métodos de inicialização e cálculo de idade
 void Pessoa::inicializa(int diaNa, int mesNa, int anoNa, const char* nome) {
 	diaP = diaNa;
 	mesP = mesNa;
@@ -36,6 +38,7 @@ void Pessoa::calc_idade_imprime(int diaAT, int mesAT, int anoAT) {
 	imprime_idade();
 }
 
+// Gets e Sets
 int Pessoa::getIdade() {
 	return idadeP;
 }

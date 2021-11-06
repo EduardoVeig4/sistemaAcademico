@@ -1,4 +1,6 @@
 #pragma once
+#include "stdafx.h"
+
 #include "Departamento.h"
 
 class ElDepartamento
@@ -8,10 +10,14 @@ private:
 public:
 	ElDepartamento();
 	~ElDepartamento();
+
 	ElDepartamento* pProx;
 	ElDepartamento* pAnte;
+
 	void setDepartamento(Departamento* pa);
 	Departamento* getDepartamento();
+
 	const char* getNome();
+
 	Universidade* getUniversidade();
 };

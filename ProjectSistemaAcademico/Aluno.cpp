@@ -1,15 +1,18 @@
 #include "Aluno.h"
 
 Aluno::Aluno(int i):Pessoa(id) {
-	ra = 0;
+	RA = 0;
 }
 
-void Aluno::setRA(int numRa) {
-	ra = numRa;
+Aluno::~Aluno() {}
+
+// Sets e Gets
+void Aluno::setRA(int ra) {
+	RA = ra;
 }
 
 int Aluno::getRA() {
-	return ra;
+	return RA;
 }
 
 void Aluno::setDisciplina(Disciplina* pd) {

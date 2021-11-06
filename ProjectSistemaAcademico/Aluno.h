@@ -9,7 +9,7 @@ class Aluno : public Pessoa{
 private:
 	//Universidade* pUnivFiliado;
 
-	int ra;
+	int RA;
 
 	Disciplina* pDiscAssociada;
 
@@ -17,7 +17,7 @@ public:
 	Aluno(int i);
 	~Aluno();
 
-	void setRA(int numRa);
+	void setRA(int ra);
 	int getRA();
 
 	void setDisciplina(Disciplina* pd);

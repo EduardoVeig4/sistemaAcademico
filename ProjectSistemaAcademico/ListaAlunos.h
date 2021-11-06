@@ -7,7 +7,7 @@
 class ListaAlunos{
 private:
 	int cont_alunos;
-	int num_alunos;
+	int numero_alunos;
 	//char nome[150];
 
 	ElAluno* pElAlunoPrim;

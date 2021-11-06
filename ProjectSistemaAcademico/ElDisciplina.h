@@ -17,7 +17,7 @@ public:
 	void setDisciplina(Disciplina* pd);
 	Disciplina* getDisciplina();
 
-	char* getNome();
+	const char* getNome();
 
 	Departamento* getDepartamento();
 };

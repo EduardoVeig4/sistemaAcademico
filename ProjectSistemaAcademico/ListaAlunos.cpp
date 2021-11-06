@@ -1,7 +1,10 @@
 #include "ListaAlunos.h"
+#include "Disciplina.h"
 
+
+// Construtoras e Destrutora
 ListaAlunos::ListaAlunos(int na/*, const char* n*/) {
-	num_alunos = na;
+	numero_alunos = na;
 	cont_alunos = 0;
 
 	pElAlunoPrim = NULL;
@@ -15,7 +18,7 @@ ListaAlunos::~ListaAlunos() {
 	paux1 = pElAlunoPrim;
 	paux2 = paux1;
 
-	// Desalocação
+	// Desalocação dos elementos da lista
 	while (paux1 != NULL) {
 		paux2 = paux1->pProx;
 		delete(paux1); // libera a memória alocada para a lista Alunos, liberando-destruindo cada objeto criado dinamicamente
@@ -36,8 +39,8 @@ char* ListaAlunos::getNome() {
 }
 */
 
-void ListaAlunos::incluaAluno(Aluno* pa) {
-	if ((cont_alunos < num_alunos) && (pa != NULL)) {
+void ListaAlunos::incluaAluno(Aluno* pa) { // Inclui um novo aluno se houver espaço e a entrada for válida
+	if ((cont_alunos < numero_alunos) && (pa != NULL)) {
 
 		ElAluno* paux = NULL; // Criado o ponteiro para ElAluno
 
@@ -59,7 +62,7 @@ void ListaAlunos::incluaAluno(Aluno* pa) {
 	}
 	else {
 		if (pa != NULL) {
-			cout << "Aluno não incluído. Turma já lotada em " << num_alunos << " alunos." << endl;
+			cout << "Aluno não incluído. Turma já lotada em " << numero_alunos << " alunos." << endl;
 		}
 		else {
 			cout << "Ponteiro está nulo!" << endl;
